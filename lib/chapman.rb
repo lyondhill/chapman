@@ -45,7 +45,7 @@ module Chapman
     # keep them alive
     while not soft_quit?
       maintain_workers
-      sleep 1
+      sleep 60
     end
 
     murder_workers!
@@ -58,6 +58,7 @@ module Chapman
   def maintain_workers
     running.each_with_index do |runner, index|
       if not runner[:thread].alive?
+        log "Dead Thread detected: #{runner[:thread].inspect}"
         w = Creeper::Worker.new()
         t =  Thread.new do
           w.work(jobs)
