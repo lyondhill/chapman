@@ -2,8 +2,8 @@
 require File.expand_path('../lib/chapman/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["Tyler Flint"]
-  gem.email         = ["tylerflint@gmail.com"]
+  gem.authors       = ["Tyler Flint", 'Lyon Hill']
+  gem.email         = ["tylerflint@gmail.com", 'lyondhill@gmail.com']
   gem.description   = %q{Like stalker, but can stalk concurrently}
   gem.summary       = %q{Takes the concept of stalker and introduces a thread pool. It's great for scenarios where tasks are light and mostly IO bound.}
   gem.homepage      = ""
